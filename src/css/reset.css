@@ -1,0 +1,655 @@
+@charset "UTF-8";
+html, :root{
+	width : 100%;
+	height : 100%;
+	font-size: 10px;
+}
+body,div,ul,li,p,dl,dt,span,a,h1,h2,h3,h4,h5,h6,img,input,button,textarea,label{
+	padding: 0;
+	margin: 0;
+	appearance: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	outline: none;
+}
+button{
+	background: none;
+	border: none;
+}
+img{
+	border: none;
+}
+body{
+	word-wrap: break-word;
+	word-break: normal; 
+	font: normal 100% "微软雅黑", "宋体", tahoma, arial, sans-serif;
+	font-size: 16px;
+	color: #343434;
+	-webkit-user-select:none;
+	background: #e9ecf1;
+}
+input, textarea, button{
+	font: normal 100% "微软雅黑", "宋体", tahoma, arial, sans-serif;
+}
+body.bg-write{
+	background: #fff;
+}
+body.pd-bottom{
+	padding-bottom: 5rem;
+}
+body.height-full{
+	height: 100%;
+}
+ul{
+	list-style-type: none;
+}
+input,textarea{
+	appearance:none;
+	-webkit-appearance:none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	border: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.active-grey{
+	background-color: rgba(4,20,42, .1) !important;
+}
+
+.active-opacity{
+	opacity: .5 !important;
+}
+
+.pr{
+	position: relative;
+}
+.pa{
+	position: absolute;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix{
+	zoom: 1;
+}
+.clearfix::after{
+	content: '';
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+}
+
+.overlayer{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, .6);
+	display: none;
+	z-index: 99;
+}
+
+.grey{
+	color: #aaa;
+}
+.red{
+	color: #f00;
+}
+.blue{
+	color: #94d301;
+}
+.none{
+	display: none;
+}
+
+.ellipsis{
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+.min-w2{
+	min-width: 2em;
+}
+.min-w3{
+	min-width: 3em;
+}
+.min-w4{
+	min-width: 4em;
+}
+.min-w5{
+	min-width: 5em;
+}
+.min-w6{
+	min-width: 6em;
+}
+.min-w7{
+	min-width: 7em;
+}
+.min-w8{
+	min-width: 8em;
+}
+
+.line{
+	height: .4rem;
+	width: 100%;
+	padding: 0 1rem;
+	position: absolute;
+	top: 0;
+	left: -1rem;
+	background: url(/leave/dist/images/line.png) repeat-x;
+	background-size: auto 60%;
+}
+
+#tips-msg{
+	position: fixed;
+	margin: auto;
+	top: 45%;
+	left: 25%;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 4px;
+	width: 44%;
+	text-align: center;
+	color: #fff;
+	line-height: 24px;
+	display: none;
+	z-index: 1000;
+	padding: 1rem;
+}
+
+.vertical-middle{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+/*------------------ 按钮组start -----------------*/
+.group-btn{
+	width: 100%;
+	border-top: 1px solid #ddd;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	text-align: center;
+	z-index: 2;
+}
+
+.group-btn button, .group-btn a{
+	color: #94d301;
+	line-height: 5rem;
+	display: block;
+	float: left;
+	position: relative;
+	width: 50%;
+	font-size: 1.8rem;
+}
+
+.group-btn .btn-no{
+  	color: #999;
+}
+
+.group-btn .btn-yes:before{
+	content: '';
+	display: block;
+	height: 40%;
+	border-left: 1px solid #ddd;
+	position: absolute;
+	vertical-align: middle;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+.group-btn .btn-full-w{
+	width: 100%;
+}
+/*------------------ 按钮组end -----------------*/
+
+.type-text-label {
+    padding: .1rem .6rem;
+    border-radius: .6rem;
+    margin-left: .5rem;
+    color: #fff;
+}
+
+.type-text-label.personalleave{
+    background: #7ac6f8;
+}
+
+.type-text-label.adjustableleave{
+    background: #65cde0;
+}
+
+.type-text-label.sickleave{
+    background: #7ebcc6;
+}
+
+.type-text-label.annualleave{
+    background: #9fcf74;
+}
+
+.type-text-label.maritalleave{
+    background: #f196bf;
+}
+
+.type-text-label.birthcontrolleave{
+    background: #f3c24d;
+}
+
+.type-text-label.nurseleave{
+    background: #efaa29;
+}
+
+.type-text-label.maternityleave{
+    background: #ad8be7;
+}
+
+.type-text-label.funeralleave{
+    background: #8493a0;
+}
+
+.floatin{
+	-webkit-animation: floatIn 300ms forwards;
+}
+
+.floatout{
+	-webkit-animation: floatOut 300ms forwards;
+}
+
+.fadein{
+	animation: fadeIn 400ms forwards;
+	-webkit-animation: fadeIn 400ms forwards;
+}
+
+.fadeout{
+	animation: fadeOut 400ms forwards;
+	-webkit-animation: fadeOut 400ms forwards;
+}
+
+textarea.error{
+	-webkit-animation: textareaError 600ms 2;
+			animation: textareaError 600ms 2;
+}
+
+.leftin{
+	-webkit-transform: translateX(-110%);
+			transform: translateX(-110%);
+	-webkit-animation: leftIn 500ms ease-out forwards;
+			animation: leftIn 500ms ease-out forwards;
+}
+
+.loading{
+	width: 10rem;
+	height: 10rem;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -5rem;
+	margin-top: -5rem;
+	z-index: 2000;
+	display: none;
+}
+.loading .circle-container{
+	width: 3rem;
+	height: 3rem;
+}
+.loading .container2{
+	-webkit-transform: rotateZ(45deg);
+			transform: rotateZ(45deg);
+}
+.loading .circle-container div{
+	width: .8rem;
+	height: .8rem;
+	border-radius: 100%;
+	background: #2FA1E8;
+	position: absolute;
+	-webkit-animation: loading 1s linear infinite;
+			animation: loading 1s ease-in-out infinite;
+}
+
+.loading .circle1{top: 0; left: 0;}
+.loading .circle2{top: 0; right: 0; }
+.loading .circle3{bottom: 0; right: 0;}
+.loading .circle4{bottom: 0; left: 0; }
+
+
+.loading .container1 .circle1{
+	-webkit-animation-delay: -1s;
+			animation-delay: -.9s;
+}
+.loading .container2 .circle1{
+	-webkit-animation-delay: -.875s;
+			animation-delay: -.8s;
+}
+.loading .container1 .circle2{
+	-webkit-animation-delay: -.75s;
+			animation-delay: -.7s;
+}
+.loading .container2 .circle2{
+	-webkit-animation-delay: -.625s;
+			animation-delay: -.6s;
+}
+.loading .container1 .circle3{
+	-webkit-animation-delay: -.5s;
+			animation-delay: -.5s;
+}
+.loading .container2 .circle3{
+	-webkit-animation-delay: -.375s;
+			animation-delay: -.4s;
+}
+.loading .container1 .circle4{
+	-webkit-animation-delay: -.25s;
+			animation-delay: -.3s;
+}
+.loading .container2 .circle4{
+	-webkit-animation-delay: -.125s;
+			animation-delay: -.2s;
+}
+
+@-webkit-keyframes loading{
+	0%, 100%{
+		-webkit-transform: scale(1.0);
+	}
+	80%{
+		-webkit-transform: scale(0.0);
+	}
+}
+
+@keyframes loading{
+	0%, 100%{
+		-webkit-transform: scale(1.0);
+				transform: scale(1.0);
+	}
+	80%{
+		-webkit-transform: scale(0.0);
+				transform: scale(0.0);
+	}
+}
+
+
+@keyframes rotateIn{
+	from{
+		transform: rotateY(90deg);
+	}
+	to {
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes rotateOut{
+	from{
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(90deg);
+	}
+}
+
+@-webkit-keyframes textareaError{
+	0%, 100%{
+		background: #fff;
+	}
+	50%{
+		background: #FDEDED;
+	}
+}
+
+@keyframes textareaError{
+	0%, 100%{
+		background: #fff;
+	}
+	50%{
+		background: #FDEDED;
+	}
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+		visibility: hidden;
+	}
+	to{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@-webkit-keyframes fadeIn{
+	from{
+		opacity: 0;
+		visibility: hidden;
+	}
+	to{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes fadeOut{
+	from{
+		opacity: 1;
+		visibility: visible;
+	}
+	to{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@-webkit-keyframes fadeOut{
+	from{
+		opacity: 1;
+		visibility: visible;
+	}
+	to{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes leftIn{
+	from{
+		-webkit-transform: translateX(-110%);
+				transform: translateX(-110%);
+	}
+	to{
+		-webkit-transform: translateX(0%);
+				transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes leftIn{
+	from{
+		-webkit-transform: translateX(-110%);
+	}
+	to{
+		-webkit-transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes floatIn{
+	from{
+		bottom: -5rem;
+	}
+	to{
+		bottom: 0rem;
+	}
+}
+
+@keyframes floatOut{
+	from{
+		bottom: -5rem;
+	}
+	to{
+		bottom: 0rem;
+	}
+}
+
+@-webkit-keyframes floatOut{
+	from{
+		bottom: 0em;
+	}
+	to{
+		bottom: -5rem;
+	}
+}
+
+@keyframes floatOut{
+	from{
+		bottom: 0em;
+	}
+	to{
+		bottom: -5rem;
+	}
+}
+
+.fallin{
+	-webkit-animation: fallIn 600ms ease-out forwards 300ms;
+			animation: fallIn 600ms ease-out forwards 300ms;
+}
+
+.fallout{
+	-webkit-animation: fallOut 200ms ease-in forwards;
+			animation: fallOut 200ms ease-in forwards;
+}
+
+@-webkit-Keyframes fallIn{
+	0%{
+		-webkit-transform: translateY(-100%);
+	}
+	30%{
+		-webkit-transform: translateY(0%);
+	}
+	50%, 60%{
+		-webkit-transform: translateY(-10%);
+	}
+	95%, 100%{
+		-webkit-transform: translateY(0%);
+	}
+}
+
+@Keyframes fallIn{
+	0%{
+		-webkit-transform: translateY(-100%);
+				transform: translateY(-100%);
+	}
+	30%{
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+	}
+	50%, 60%{
+		-webkit-transform: translateY(-10%);
+				transform: translateY(-10%);
+	}
+	95%, 100%{
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+	}
+}
+
+@-webkit-Keyframes fallOut{
+	0%{
+		-webkit-transform: translateY(0%);
+	}
+	100%{
+		-webkit-transform: translateY(-100%);
+	}
+}
+
+@-webkit-Keyframes fallOut{
+	0%{
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+	}
+	100%{
+		-webkit-transform: translateY(-100%);
+				transform: translateY(-100%);
+	}
+}
+
+.zoom{
+	-webkit-animation: zoom 300ms ease-out forwards 400ms;
+			animation: zoom 300ms ease-out forwards 400ms;
+}
+
+@-webkit-Keyframes zoom{
+	0%{
+		-webkit-transform: scale(0);
+	}
+	50%{
+		-webkit-transform: scale(1.1);
+	}
+	90%, 100%{
+		-webkit-transform: scale(1);
+	}
+}
+
+@Keyframes zoom{
+	0%{
+		-webkit-transform: scale(0);
+				transform: scale(0);
+	}
+	50%{
+		-webkit-transform: scale(1.1);
+				transform: scale(1.1);
+	}
+	90%, 100%{
+		-webkit-transform: scale(1);
+			transform: scale(1);
+	}
+}
+
+@-webkit-Keyframes zoom{
+	0%{
+		-webkit-transform: scale(0);
+	}
+	50%{
+		-webkit-transform: scale(1.1);
+	}
+	90%, 100%{
+		-webkit-transform: scale(1);
+	}
+}
+
+.shake{
+	-webkit-animation: shake 200ms ease-out forwards;
+			animation: shake 200ms ease-out forwards;
+}
+
+@-webkit-Keyframes shake{
+	0%, 100%{
+		-webkit-transform: translateX(0);
+	}
+	15%, 45%, 75%{
+		-webkit-transform: translateX(-5%);
+	}
+	30%, 60%, 90%{
+		-webkit-transform: translateX(5%);
+	}
+}
+
+@Keyframes shake{
+	0%, 100%{
+		-webkit-transform: translateX(0);
+				transform: translateX(0);
+	}
+	15%, 45%, 75%{
+		-webkit-transform: translateX(-5%);
+				transform: translateX(-5%);
+	}
+	30%, 60%, 90%{
+		-webkit-transform: translateX(5%);
+				transform: translateX(5%);
+	}
+}

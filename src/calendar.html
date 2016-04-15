@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calendar</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/calendar.css">
+</head>
+<body>
+	<div class="calendar-wrap"></div>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/widget.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>
+	<script type="text/javascript">
+		new Calendar({
+			target:'.calendar-wrap',
+			className: 'cal',
+			tagDates: [1,5],
+			todayText: '今天',
+			year: 2016,
+			month: 4,
+			onReady: function () {
+				alert('ready');
+			},
+			onChangeMonthBefore: function (dateObj, type) {
+				
+			},
+			onSelect: function (dateObj, e) {
+				
+			},
+			onChangeMonth: function (dateObj) {
+				
+			}
+		});
+	</script>
+</body>
+</html>

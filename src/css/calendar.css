@@ -1,0 +1,153 @@
+.calendar{
+	text-align: center;
+	background: #fff;
+	padding-bottom: 1rem;
+	overflow: hidden;
+}
+
+/*------- 日历头部模块 ------*/
+.calendar .cal-header{
+	padding: 0 3%;
+	border-bottom: 1px solid #eee;
+	height: 5rem;
+	line-height: 5rem;
+	background: #fff;
+	position: relative;
+	z-index: 2;
+}
+
+.calendar .today{
+	display: inline-block;
+	width: 14%;
+	position: absolute;
+	margin-left: 1%;
+	left: 0;
+	color: #1a85ff;
+}
+
+.calendar .select-dep-wrap{
+	display: inline-block;
+	width: 14%;
+	height: 5.5rem;
+	position: absolute;
+	margin-right: 1.2%;
+	right: 0;
+}
+
+.calendar .select-deparment{
+	display: inline-block;
+	width: 2.6rem;
+	height: 2.6rem;
+	background: #1a85ff;
+	border-radius: 100%;
+	vertical-align: middle;
+}
+
+.calendar .cal-header .title-wrap{
+	margin: 0 5%;
+	font-size: 1.2em;
+}
+
+.calendar .cal-header .pre-mon, .calendar .cal-header .next-mon{
+	display: inline-block;
+	width: 4rem;
+	height: 3rem;
+	vertical-align: -.8rem;
+	position: relative;
+}
+
+.calendar .cal-header .pre-mon:before, .calendar .cal-header .next-mon:before{
+	content: '';
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	border-left: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	position: absolute;
+}
+
+.calendar .cal-header .pre-mon:before{
+	right: 1rem;
+	top: .9rem;
+	-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+}
+
+.calendar .cal-header .next-mon:before{
+	top: .9rem;
+	left: .6rem;
+	-webkit-transform: rotate(-135deg);
+			transform: rotate(-135deg);
+}
+
+/*------- 头部星期部分 ------*/
+.calendar .days{
+	padding: .5rem 0;
+	background: #fff;
+	position: relative;
+	z-index: 2;
+}
+
+.calendar .days span{
+	display: inline-block;
+	width: 14%;
+	font-size: .9em;
+}
+
+/*------- 日历表模块 ------*/
+.calendar .oneweek > span{
+	display: inline-block;
+	width: 14%;
+	height: 5rem;
+	line-height: 5rem;
+	position: relative;
+}
+
+.calendar .oneweek .pre, .calendar .oneweek .next{
+	color: #d9dbdd !important;
+}
+
+.calendar .date span{
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	border-radius: 100%;
+	-webkit-transition: all 200ms;
+			transition: all 200ms;
+}
+
+.calendar .date.curr-date > span{
+	color: #fff;
+	background: #1a85ff;
+}
+
+.calendar .date.small-font{
+	font-size: 1.3rem;
+}
+
+.calendar .tag:after{
+	content: '';
+	display: inline-block;
+	width: 0.8rem;
+	height: .8rem;
+	border-radius: 100%;
+	background: #b0ceee;
+	position: absolute;
+	left: 50%;
+	margin-left: -.4rem;
+	bottom: 0;
+}
+
+.calendar .my-tag:after{
+	content: '';
+	display: inline-block;
+	width: 0.8rem;
+	height: .8rem;
+	border-radius: 100%;
+	background: #eeb0b0;
+	position: absolute;
+	left: 50%;
+	margin-left: -.4rem;
+	bottom: .1rem;
+}
