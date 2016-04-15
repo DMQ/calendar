@@ -1,0 +1,22 @@
+{
+  "name": "calendar-mb",
+  "version": "0.1.0",
+  "description": "A calendar component for webApp",
+  "main": "src/calendar.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DMQ/calendar.git"
+  },
+  "keywords": [
+    "calendar"
+  ],
+  "author": "muqin_deng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DMQ/calendar/issues"
+  },
+  "homepage": "https://github.com/DMQ/calendar#readme"
+}
