@@ -1,4 +1,4 @@
-# calendar
+# calendar  -> [demo](http://htmlpreview.github.io/?https://github.com/DMQ/calendar/blob/master/src/calendar.html)
 移动端日历控件
 
 ![image](https://cloud.githubusercontent.com/assets/6860287/14552856/6b77670c-0314-11e6-959b-cb6079b6c149.png)
