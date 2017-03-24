@@ -39,6 +39,11 @@
     border-radius: 100%;
     vertical-align: middle;
 }
+
+.calendar .date-wrap {
+    position: relative;
+}
+
 .calendar .cal-header .title-wrap {
     margin: 0 5%;
     font-size: 1.2em;
