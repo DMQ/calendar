@@ -9,11 +9,15 @@
 </head>
 <body>
 	<div class="calendar-wrap"></div>
+	<button class="button" style="background: #1a85ff;color: #fff;padding: 4px 12px;border-radius: 4px;display: block;margin: 0 auto;">
+		收起
+	</button>
 	<script type="text/javascript" src="js/zepto.min.js"></script>
 	<script type="text/javascript" src="js/widget.js"></script>
 	<script type="text/javascript" src="js/calendar.js"></script>
+	<script src="js/calendar-extend-slide.js"></script>
 	<script type="text/javascript">
-		new Calendar({
+		var cal = new Calendar({
 			target:'.calendar-wrap',
 			className: 'cal',
 			tagDates: [1,5],
@@ -33,6 +37,16 @@
 				
 			}
 		});
+		
+		$('.button').on('click', function() {
+			var $this = $(tihs);
+			if ($this.hasClass('slideUp')) {
+			    cal.slideDown();
+			} else {
+			    cal.slideUp();
+			}
+			$this.toggleClass('slideUp');
+		);
 	</script>
 </body>
 </html>
