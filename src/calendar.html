@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="calendar-wrap"></div>
-	<button class="button" style="background: #1a85ff;color: #fff;padding: 4px 12px;border-radius: 4px;display: none;margin: 0 auto;">
+	<button class="button" style="background: #1a85ff;color: #fff;padding: 4px 12px;border-radius: 4px;display: none;margin: 40px auto;">
 		收起
 	</button>
 	<script type="text/javascript" src="js/zepto.min.js"></script>
@@ -39,10 +39,10 @@
 		});
 		
 		$('.button').on('click', function() {
-			var $this = $(tihs);
+			var $this = $(this);
 			if ($this.hasClass('slideUp')) {
 			    cal.slideDown();
-			    $tihs.text('收起');
+			    $this.text('收起');
 			} else {
 			    cal.slideUp();
 			    $this.text('展开');
