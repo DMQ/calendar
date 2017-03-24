@@ -4,8 +4,16 @@
  * @time 2015/04/22
  */
 (function (window, undefined) {
+	var __prop__ = Calendar.prototype;
+
 	//拓展日历功能
-	$.extend(Calendar.prototype, {
+	Calendar.prototype = $.extend({}, Calendar.prototype, {
+		// 重写ready方法
+		ready: function() {
+			__prop__.ready.call(this);
+			this.resetCalSwipeProp();
+		},
+
 		//获取当前日所在行下标
 		getSelectedDateRowIndex: function () {
 			var datesData = this.get('datesData'),	//日历表数据
@@ -71,6 +79,8 @@
 				.set('dateWrapOriginHeight', height)
 				.set('dateWrapHeight', height)
 				.set('top', 0);
+
+			this.get$dateWrap().height(height).css('top',0);
 		},
 		
 		//日历折叠
