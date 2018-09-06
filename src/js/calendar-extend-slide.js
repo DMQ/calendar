@@ -12,6 +12,7 @@
 		ready: function() {
 			__prop__.ready.call(this);
 			this.resetCalSwipeProp();
+			this.adjustDateWrapHeight();
 		},
 
 		//获取当前日所在行下标
@@ -230,6 +231,19 @@
 		
 		isSlideUp: function () {
 			return this.get('isSlideUp');
+		},
+
+		adjustDateWrapHeight: function () {
+			this.on('changeMonth', function() {
+				var $dateWrap = this.get$dateWrap()
+				var height = 0;
+
+				$dateWrap.find('.oneweek').each(function(i, el) {
+					height += $(el).height()
+				});
+
+				$dateWrap.height(height);
+			}.bind(this))
 		}
 	});
 })(window);
